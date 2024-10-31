@@ -1,0 +1,25 @@
+---
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: provision-cluster
+spec:
+  volumes:
+    - name: shared-volume
+      emptyDir: {}
+  steps:
+    - name: get-supported-versions
+      image: alpine:3.14
+      script: |
+        echo "Supported versions" > /workspace/shared/supported-versions.txt
+      volumeMounts:
+        - name: shared-volume
+          mountPath: /workspace/shared
+    - name: pick-version
+      image: alpine:3.14
+      script: |
+        version=$(cat /workspace/shared/supported-versions.txt)
+        echo "Selected version: $version" > /workspace/shared/selected-version.txt
+      volumeMounts:
+        - name: shared-volume
+          mountPath: /workspace/shared
