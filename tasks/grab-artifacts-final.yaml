@@ -1,0 +1,17 @@
+---
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: grab-artifacts-final
+spec:
+  volumes:
+    - name: shared-volume
+      emptyDir: {}
+  steps:
+    - name: gather-results
+      image: golang:1.22
+      script: |
+        ls -larth /workspace/shared
+      volumeMounts:
+        - name: shared-volume
+          mountPath: /workspace/shared

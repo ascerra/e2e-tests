@@ -1,0 +1,17 @@
+---
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: provision-eaas-space
+spec:
+  volumes:
+    - name: shared-volume
+      emptyDir: {}
+  steps:
+    - name: provision-space
+      image: alpine:3.14
+      script: |
+        echo "Provisioning space with owner: $(context.pipelineRun.name)" > /workspace/shared/space.txt
+      volumeMounts:
+        - name: shared-volume
+          mountPath: /workspace/shared

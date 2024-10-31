@@ -1,0 +1,33 @@
+apiVersion: tekton.dev/v1
+kind: Pipeline
+metadata:
+  name: provision-cluster
+spec:
+  params:
+    - description: Snapshot of the application
+      name: SNAPSHOT
+      default: '{"components": [{"name":"test-app", "containerImage": "quay.io/example/repo:latest"}]}'
+      type: string
+  tasks:
+    - name: test-metadata
+      taskRef:
+        name: test-metadata
+      params:
+        - name: SNAPSHOT
+          value: $(params.SNAPSHOT)
+
+    - name: provision-eaas-space
+      taskRef:
+        name: provision-eaas-space
+
+    - name: provision-cluster
+      runAfter:
+        - test-metadata
+        - provision-eaas-space
+      taskRef:
+        name: provision-cluster
+
+  finally:
+    - name: grab-artifacts-final
+      taskRef:
+        name: grab-artifacts-final
