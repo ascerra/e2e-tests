@@ -1,6 +1,8 @@
 module github.com/konflux-ci/e2e-tests
 
-go 1.21.0
+go 1.22
+
+toolchain go1.22.9
 
 require (
 	github.com/IBM/go-sdk-core/v5 v5.15.3
@@ -15,7 +17,7 @@ require (
 	github.com/codeready-toolchain/toolchain-common v0.0.0-20220523142428-2558e76260fb
 	github.com/codeready-toolchain/toolchain-e2e v0.0.0-20220525131508-60876bfb99d3
 	github.com/devfile/library/v2 v2.2.1-0.20230418160146-e75481b7eebd
-	github.com/enterprise-contract/enterprise-contract-controller/api v0.1.50
+	github.com/enterprise-contract/enterprise-contract-controller/api v0.1.83
 	github.com/go-git/go-git/v5 v5.12.0
 	github.com/go-task/slim-sprig v0.0.0-20230315185526-52ccab3ef572
 	github.com/gofri/go-github-ratelimit v1.0.3-0.20230428184158-a500e14de53f
@@ -33,6 +35,7 @@ require (
 	github.com/moby/buildkit v0.12.5
 	github.com/onsi/ginkgo/v2 v2.17.3
 	github.com/onsi/gomega v1.33.1
+	github.com/opencontainers/image-spec v1.1.0
 	github.com/openshift-pipelines/pipelines-as-code v0.18.0
 	github.com/openshift/api v0.0.0-20230213134911-7ba313770556
 	github.com/openshift/client-go v0.0.0-20221019143426-16aed247da5c
@@ -49,8 +52,8 @@ require (
 	golang.org/x/oauth2 v0.20.0
 	golang.org/x/tools v0.20.0
 	gopkg.in/yaml.v2 v2.4.0
-	k8s.io/api v0.29.7
-	k8s.io/apimachinery v0.29.7
+	k8s.io/api v0.29.11
+	k8s.io/apimachinery v0.29.11
 	k8s.io/cli-runtime v0.29.4
 	k8s.io/client-go v1.5.2
 	k8s.io/klog v1.0.0
@@ -59,7 +62,7 @@ require (
 	k8s.io/utils v0.0.0-20240102154912-e7106e64919e
 	knative.dev/pkg v0.0.0-20240219120257-9227ebb57a4e
 	oras.land/oras-go/v2 v2.3.0
-	sigs.k8s.io/controller-runtime v0.17.5
+	sigs.k8s.io/controller-runtime v0.17.6
 	sigs.k8s.io/yaml v1.4.0
 )
 
@@ -171,7 +174,6 @@ require (
 	github.com/go-kit/log v0.2.1 // indirect
 	github.com/go-logfmt/logfmt v0.6.0 // indirect
 	github.com/go-logr/logr v1.4.1 // indirect
-	github.com/go-logr/zapr v1.3.0 // indirect
 	github.com/go-openapi/errors v0.21.0 // indirect
 	github.com/go-openapi/jsonpointer v0.20.2 // indirect
 	github.com/go-openapi/jsonreference v0.20.4 // indirect
@@ -241,7 +243,6 @@ require (
 	github.com/mxk/go-flowrate v0.0.0-20140419014527-cca7078d478f // indirect
 	github.com/oklog/ulid v1.3.1 // indirect
 	github.com/opencontainers/go-digest v1.0.0 // indirect
-	github.com/opencontainers/image-spec v1.1.0 // indirect
 	github.com/opencontainers/runc v1.1.14 // indirect
 	github.com/opencontainers/runtime-spec v1.1.0 // indirect
 	github.com/operator-framework/operator-lib v0.13.0 // indirect
@@ -255,10 +256,7 @@ require (
 	github.com/prometheus/common v0.48.0 // indirect
 	github.com/prometheus/procfs v0.12.0 // indirect
 	github.com/prometheus/statsd_exporter v0.23.1 // indirect
-	github.com/redhat-appstudio/application-api v0.0.0-20240106104232-18f545e48a03 // indirect
 	github.com/redhat-appstudio/image-controller v0.0.0-20231003082540-48893226ba8b // indirect
-	github.com/redhat-appstudio/integration-service v0.0.0-20231025084434-b3f521c408d1 // indirect
-	github.com/redhat-appstudio/operator-toolkit v0.0.0-20231201124606-2087182322ae // indirect
 	github.com/redis/go-redis/v9 v9.0.5 // indirect
 	github.com/robfig/cron/v3 v3.0.1 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
@@ -300,9 +298,9 @@ require (
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-	k8s.io/apiextensions-apiserver v0.29.7 // indirect
-	k8s.io/apiserver v0.29.4 // indirect
-	k8s.io/component-base v0.29.7 // indirect
+	k8s.io/apiextensions-apiserver v0.29.11 // indirect
+	k8s.io/apiserver v0.29.11 // indirect
+	k8s.io/component-base v0.29.11 // indirect
 	k8s.io/component-helpers v0.29.4 // indirect
 	k8s.io/kube-aggregator v0.29.2 // indirect
 	k8s.io/kube-openapi v0.0.0-20240221221325-2ac9dc51f3f1 // indirect
