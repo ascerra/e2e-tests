@@ -55,7 +55,7 @@ require (
 	k8s.io/client-go v1.5.2
 	k8s.io/klog v1.0.0
 	k8s.io/klog/v2 v2.120.1
-	k8s.io/test-infra v0.0.0-20231004164548-dee1fe445410
+	k8s.io/test-infra a440e7d5f0ae
 	k8s.io/utils v0.0.0-20240102154912-e7106e64919e
 	knative.dev/pkg v0.0.0-20240219120257-9227ebb57a4e
 	oras.land/oras-go/v2 v2.3.0
