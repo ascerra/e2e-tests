@@ -255,7 +255,7 @@ require (
 	github.com/prometheus/common v0.48.0 // indirect
 	github.com/prometheus/procfs v0.12.0 // indirect
 	github.com/prometheus/statsd_exporter v0.23.1 // indirect
-	github.com/redhat-appstudio/application-api v0.0.0-20240106104232-18f545e48a03 // indirect
+	github.com/redhat-appstudio/application-api 5a9670bf7679 // indirect
 	github.com/redhat-appstudio/image-controller v0.0.0-20231003082540-48893226ba8b // indirect
 	github.com/redhat-appstudio/integration-service v0.0.0-20231025084434-b3f521c408d1 // indirect
 	github.com/redhat-appstudio/operator-toolkit v0.0.0-20231201124606-2087182322ae // indirect
