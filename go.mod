@@ -257,7 +257,7 @@ require (
 	github.com/prometheus/statsd_exporter v0.23.1 // indirect
 	github.com/redhat-appstudio/application-api v0.0.0-20240106104232-18f545e48a03 // indirect
 	github.com/redhat-appstudio/image-controller v0.0.0-20231003082540-48893226ba8b // indirect
-	github.com/redhat-appstudio/integration-service v0.0.0-20231025084434-b3f521c408d1 // indirect
+	github.com/redhat-appstudio/integration-service 4c2035e7eefe // indirect
 	github.com/redhat-appstudio/operator-toolkit v0.0.0-20231201124606-2087182322ae // indirect
 	github.com/redis/go-redis/v9 v9.0.5 // indirect
 	github.com/robfig/cron/v3 v3.0.1 // indirect
